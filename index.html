@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ff4f3c">
+<title>暖手宝选购清单 · 拼多多实拍汇总</title>
+<style>
+  :root{
+    --red:#ff4f3c; --red-d:#e8402e; --ink:#1f2024; --sub:#8a8f99;
+    --line:#eef0f4; --bg:#f6f7fb; --card:#fff; --tag:#fff1ee; --radius:18px;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+    background:var(--bg); color:var(--ink); font-size:16px; line-height:1.6;
+    padding-bottom:calc(28px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:640px;margin:0 auto;padding:0 12px}
+  header{
+    background:linear-gradient(135deg,#ff6a4d 0%,#ff4f3c 45%,#ff3d63 100%);
+    color:#fff;padding:calc(22px + env(safe-area-inset-top)) 16px 22px;
+    border-radius:0 0 24px 24px;
+  }
+  header h1{margin:0 0 6px;font-size:22px;letter-spacing:.5px}
+  header p{margin:0;font-size:13px;opacity:.94;line-height:1.65}
+  .stat{display:flex;gap:8px;margin-top:14px}
+  .stat div{
+    flex:1;background:rgba(255,255,255,.18);border-radius:14px;
+    padding:9px 6px;text-align:center
+  }
+  .stat b{display:block;font-size:19px;line-height:1.2}
+  .stat span{font-size:11px;opacity:.92}
+  .tips{
+    background:#fff;border-radius:var(--radius);padding:14px 16px;margin:14px 0;
+    box-shadow:0 2px 10px rgba(24,32,56,.05);font-size:13.5px;color:#4b5058
+  }
+  .tips h3{margin:0 0 8px;font-size:15px;color:var(--ink)}
+  .tips ul{margin:0;padding-left:18px}
+  .tips li{margin:5px 0}
+  .tips b{color:var(--red-d)}
+  .filters{
+    position:sticky;top:0;z-index:20;display:flex;gap:8px;
+    padding:10px 12px;background:rgba(246,247,251,.94);backdrop-filter:blur(10px);
+    max-width:640px;margin:0 auto;
+  }
+  .filters button{
+    flex:0 0 auto;border:1px solid var(--line);background:#fff;color:#4b5058;
+    border-radius:999px;padding:7px 15px;font-size:14px;font-weight:500;font-family:inherit
+  }
+  .filters button.on{background:var(--red);border-color:var(--red);color:#fff;box-shadow:0 4px 12px rgba(255,79,60,.28)}
+  .card{
+    background:var(--card);border-radius:var(--radius);overflow:hidden;
+    margin:12px 0;box-shadow:0 3px 14px rgba(24,32,56,.07);scroll-margin-top:64px
+  }
+  .card-head{display:flex;align-items:center;gap:7px;padding:12px 14px 8px;flex-wrap:wrap}
+  .badge{font-size:11.5px;font-weight:700;padding:2.5px 9px;border-radius:999px}
+  .match-card .badge{background:#fff0ec;color:#e8402e}
+  .pick-card .badge{background:#eef4ff;color:#2f6bff}
+  .no{font-size:16px;color:var(--red);font-weight:700}
+  .brand{font-size:12.5px;color:var(--sub);margin-left:auto}
+  .pic-wrap{position:relative;background:#f2f3f7}
+  .main-pic{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
+  .pic-label{
+    position:absolute;left:10px;bottom:10px;font-size:11px;color:#fff;
+    background:rgba(0,0,0,.42);padding:3px 8px;border-radius:999px
+  }
+  .card-body{padding:12px 14px 14px}
+  .card-body h2{margin:0 0 8px;font-size:16.5px;line-height:1.45;font-weight:700}
+  .price-row{display:flex;align-items:baseline;gap:10px;margin-bottom:8px}
+  .price{color:var(--red);font-weight:800;font-size:25px;letter-spacing:-.5px}
+  .price i{font-size:14px;font-style:normal;font-weight:700;margin-right:1px}
+  .sales{font-size:12.5px;color:var(--sub)}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:9px}
+  .tag{font-size:11.5px;color:#b4462f;background:var(--tag);padding:3px 9px;border-radius:7px}
+  .desc{margin:0 0 9px;font-size:14px;color:#43474e;line-height:1.72}
+  .match{
+    margin:0 0 10px;font-size:12.5px;color:#7a5200;background:#fff8e6;
+    border-left:3px solid #ffc63c;padding:7px 10px;border-radius:0 8px 8px 0;line-height:1.6
+  }
+  .buyer-block{border-top:1px dashed var(--line);padding-top:11px;margin-top:2px}
+  .buyer-title{display:flex;align-items:baseline;gap:8px;margin-bottom:9px}
+  .buyer-title b{font-size:13.5px}
+  .buyer-title span{font-size:11.5px;color:var(--sub)}
+  .buyer-scroll{
+    display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;
+    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch
+  }
+  .buyer-scroll::-webkit-scrollbar{display:none}
+  .thumb{
+    flex:0 0 auto;width:92px;height:92px;border-radius:12px;object-fit:cover;
+    background:#f2f3f7;scroll-snap-align:start;border:1px solid var(--line)
+  }
+
+  .shot-row{display:flex;align-items:center;gap:10px;margin:2px 0 11px}
+  .shot-pic{position:relative;flex:0 0 auto;width:76px;height:76px;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#f2f3f7}
+  .shot-pic img{width:100%;height:100%;object-fit:cover;display:block}
+  .shot-pic span{position:absolute;left:0;bottom:0;right:0;background:rgba(0,0,0,.45);color:#fff;font-size:9.5px;text-align:center;padding:1px 0;letter-spacing:.5px}
+  .shot-arrow{font-size:12px;color:var(--sub)}
+  .buy-btn{
+    display:flex;align-items:center;justify-content:center;gap:6px;
+    margin-top:14px;padding:13px;border-radius:13px;text-decoration:none;
+    background:linear-gradient(135deg,#ff6a4d,#ff3d63);color:#fff;
+    font-size:15.5px;font-weight:700;letter-spacing:.3px;
+    box-shadow:0 6px 16px rgba(255,79,60,.3)
+  }
+  .buy-btn em{font-style:normal;font-size:11px;font-weight:500;opacity:.85}
+  .buy-btn:active{transform:scale(.985)}
+  footer{text-align:center;color:var(--sub);font-size:11.5px;padding:20px 16px 6px;line-height:1.9}
+  #lightbox{
+    position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:99;display:none;
+    align-items:center;justify-content:center
+  }
+  #lightbox.on{display:flex}
+  #lightbox img{max-width:100vw;max-height:86vh;object-fit:contain}
+  #lightbox .close{
+    position:absolute;top:calc(14px + env(safe-area-inset-top));right:16px;
+    width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.16);
+    color:#fff;font-size:22px;display:flex;align-items:center;justify-content:center
+  }
+  #lightbox .hint{
+    position:absolute;bottom:calc(20px + env(safe-area-inset-bottom));
+    color:rgba(255,255,255,.6);font-size:12px
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap" style="padding:0">
+    <h1>暖手宝选购清单</h1>
+    <p>按你的 7 张拼多多截图逐个找货，附卖家图 + 真实买家返图；另外挑了 6 款销量和评价都靠前的款式。</p>
+    <div class="stat">
+      <div><b>7</b><span>截图同款</span></div>
+      <div><b>6</b><span>额外推荐</span></div>
+      <div><b>37</b><span>张买家实拍</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="tips">
+    <h3>选购要点</h3>
+    <ul>
+      <li><b>先看 3C</b>：充电式热水袋必须有「新国标 3C」和防爆充电夹，没有的直接跳过。</li>
+      <li><b>看结构</b>：水电分离 / 防干烧发热管 + 自动断电（65~70℃）更安全。</li>
+      <li><b>看外套</b>：兔绒 / 法兰绒 + <b>可拆洗</b>，用一冬天才不至于没法打理。</li>
+      <li><b>看需求</b>：暖手选磁吸分体式（轻、快热）；暖被窝 / 暖肚子选加长加大号水袋。</li>
+    </ul>
+  </div>
+</div>
+
+<nav class="filters">
+  <button class="on" data-f="all">全部 13</button>
+  <button data-f="match">截图同款 7</button>
+  <button data-f="pick">额外推荐 6</button>
+</nav>
+
+<div class="wrap">
+
+    <article class="card match-card" data-group="match" id="p0">
+      <div class="card-head">
+        <span class="badge match">你截图里的</span><span class="no">①</span>
+        <span class="brand">三丽鸥 正版授权</span>
+      </div>
+      <div class="pic-wrap">
+        <img class="main-pic" loading="lazy" src="imgs/s/842750327247_2.jpg" data-full="imgs/s/842750327247_2.jpg" alt="三丽鸥 智能电热水袋（美乐蒂 / 库洛米 / Hello Kitty）">
+        <span class="pic-label">卖家图</span>
+      </div>
+      <div class="card-body">
+        <h2>三丽鸥 智能电热水袋（美乐蒂 / 库洛米 / Hello Kitty）</h2>
+        <div class="price-row">
+          <span class="price"><i>¥</i>38.7</span>
+          <span class="sales">全店总销 60.5万+</span>
+        </div>
+        <div class="tags"><span class="tag">毛绒外套</span><span class="tag">防爆内胆</span><span class="tag">多角色可选</span></div>
+        <div class="shot-row"><div class="shot-pic"><img src="imgs/orig/shot1.jpg" alt="我的截图" data-full="imgs/orig/shot1.jpg"><span>你的截图</span></div><div class="shot-arrow">这件商品 →</div></div>
+        <p class="desc">充电式电热水袋：毛绒外套 + 加厚防爆内胆，配防爆充电夹。美乐蒂、库洛米、Hello Kitty、帕恰狗四个角色，宽大的毛绒面抱着暖手又暖肚子。</p>
+        <p class="match">对应你截图的粉色美乐蒂毛绒手捂（同系列不同角色款）。</p>
+        <div class="buyer-block">
+          <div class="buyer-title"><b>买家实拍返图</b><span>3 张 · 点图放大</span></div>
+          <div class="buyer-scroll"><img class="thumb" loading="lazy" src="imgs/b/842750327247_2.jpg" data-full="imgs/b/842750327247_2.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/842750327247_3.jpg" data-full="imgs/b/842750327247_3.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/842750327247_4.jpg" data-full="imgs/b/842750327247_4.jpg" alt="买家实拍"></div>
+        </div>
+        <a class="buy-btn" href="https://mobile.yangkeduo.com/goods.html?goods_id=842750327247" target="_blank" rel="noopener">
+          去拼多多看详情 → <em>ID 842750327247</em>
+        </a>
+      </div>
+    </article>
+
+    <article class="card match-card" data-group="match" id="p1">
+      <div class="card-head">
+        <span class="badge match">你截图里的</span><span class="no">②</span>
+        <span class="brand">Airmate 艾美特</span>
+      </div>
+      <div class="pic-wrap">
+        <img class="main-pic" loading="lazy" src="imgs/s/1020793392193_3.jpg" data-full="imgs/s/1020793392193_3.jpg" alt="艾美特 特大号电热水袋 长37cm × 宽19cm 兔绒双插手">
+        <span class="pic-label">卖家图</span>
+      </div>
+      <div class="card-body">
+        <h2>艾美特 特大号电热水袋 长37cm × 宽19cm 兔绒双插手</h2>
+        <div class="price-row">
+          <span class="price"><i>¥</i>52.9</span>
+          <span class="sales">本店已拼 1.7万</span>
+        </div>
+        <div class="tags"><span class="tag">37×19cm 加大号</span><span class="tag">亲肤兔绒</span><span class="tag">双插手</span><span class="tag">可拆洗</span></div>
+        <div class="shot-row"><div class="shot-pic"><img src="imgs/orig/shot2.jpg" alt="我的截图" data-full="imgs/orig/shot2.jpg"><span>你的截图</span></div><div class="shot-arrow">这件商品 →</div></div>
+        <p class="desc">长 37cm、宽 19cm 的加大号电热水袋，亲肤兔绒外套 + 双插手设计，外套可拆洗。恒温约 12 小时，防漏防干烧，配防爆充电夹，整晚抱着不凉。</p>
+        <p class="match">截图②「长37宽19cm 陪伴一整晚」就是这条链接的规格页。</p>
+        <div class="buyer-block">
+          <div class="buyer-title"><b>买家实拍返图</b><span>2 张 · 点图放大</span></div>
+          <div class="buyer-scroll"><img class="thumb" loading="lazy" src="imgs/b/1020793392193_1.jpg" data-full="imgs/b/1020793392193_1.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1020793392193_3.jpg" data-full="imgs/b/1020793392193_3.jpg" alt="买家实拍"></div>
+        </div>
+        <a class="buy-btn" href="https://mobile.yangkeduo.com/goods.html?goods_id=1020793392193" target="_blank" rel="noopener">
+          去拼多多看详情 → <em>ID 1020793392193</em>
+        </a>
+      </div>
+    </article>
+
+    <article class="card match-card" data-group="match" id="p2">
+      <div class="card-head">
+        <span class="badge match">你截图里的</span><span class="no">③</span>
+        <span class="brand">MINISO 名创优品</span>
+      </div>
+      <div class="pic-wrap">
+        <img class="main-pic" loading="lazy" src="imgs/s/1028658133913.jpg" data-full="imgs/s/1028658133913.jpg" alt="名创优品 双口袋磁吸二合一暖手宝（新国标3C）">
+        <span class="pic-label">卖家图</span>
+      </div>
+      <div class="card-body">
+        <h2>名创优品 双口袋磁吸二合一暖手宝（新国标3C）</h2>
+        <div class="price-row">
+          <span class="price"><i>¥</i>95.9</span>
+          <span class="sales">本店已拼 900万+</span>
+        </div>
+        <div class="tags"><span class="tag">双磁吸分体</span><span class="tag">720°包覆发热</span><span class="tag">NTC速热</span><span class="tag">可上飞机</span></div>
+        <div class="shot-row"><div class="shot-pic"><img src="imgs/orig/shot3.jpg" alt="我的截图" data-full="imgs/orig/shot3.jpg"><span>你的截图</span></div><div class="shot-arrow">这件商品 →</div></div>
+        <p class="desc">两只可以磁吸合体、也能拆开分给两个人用；双口袋式包裹手背手心，720° 全包覆发热，NTC 快速升温，3C 认证电池，可带上飞机高铁，放口袋里几乎没分量。</p>
+        <p class="match">截图③的「石墨烯加热护手 + 磁吸双面速热」正是名创这一系列。</p>
+        <div class="buyer-block">
+          <div class="buyer-title"><b>买家实拍返图</b><span>3 张 · 点图放大</span></div>
+          <div class="buyer-scroll"><img class="thumb" loading="lazy" src="imgs/b/1028658133913_1.jpg" data-full="imgs/b/1028658133913_1.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1028658133913_2.jpg" data-full="imgs/b/1028658133913_2.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1028658133913_4.jpg" data-full="imgs/b/1028658133913_4.jpg" alt="买家实拍"></div>
+        </div>
+        <a class="buy-btn" href="https://mobile.yangkeduo.com/goods.html?goods_id=1028658133913" target="_blank" rel="noopener">
+          去拼多多看详情 → <em>ID 1028658133913</em>
+        </a>
+      </div>
+    </article>
+
+    <article class="card match-card" data-group="match" id="p3">
+      <div class="card-head">
+        <span class="badge match">你截图里的</span><span class="no">④</span>
+        <span class="brand">猫猫熊</span>
+      </div>
+      <div class="pic-wrap">
+        <img class="main-pic" loading="lazy" src="imgs/s/1016543056581_card.jpg" data-full="imgs/s/1016543056581_card.jpg" alt="猫猫熊 毛绒卡通充电热水袋 仿兔绒可拆洗">
+        <span class="pic-label">卖家图</span>
+      </div>
+      <div class="card-body">
+        <h2>猫猫熊 毛绒卡通充电热水袋 仿兔绒可拆洗</h2>
+        <div class="price-row">
+          <span class="price"><i>¥</i>55.8</span>
+          <span class="sales">本店已拼 1.4万</span>
+        </div>
+        <div class="tags"><span class="tag">65℃恒温</span><span class="tag">仿兔绒</span><span class="tag">双插手</span><span class="tag">防爆充电夹</span></div>
+        <div class="shot-row"><div class="shot-pic"><img src="imgs/orig/shot4.jpg" alt="我的截图" data-full="imgs/orig/shot4.jpg"><span>你的截图</span></div><div class="shot-arrow">这件商品 →</div></div>
+        <p class="desc">仿兔绒外套手感软，65℃ 恒温蓄热一整晚，双插手结构，外套可拆洗，配防爆充电夹。立体卡通造型（小熊 / 猫猫等），小红书爆款画风。</p>
+        <p class="match">截图④「粉色小熊、一握即暖、学生可用」属于这一类毛绒卡通暖手宝。</p>
+        <div class="buyer-block">
+          <div class="buyer-title"><b>买家实拍返图</b><span>1 张 · 点图放大</span></div>
+          <div class="buyer-scroll"><img class="thumb" loading="lazy" src="imgs/b/1016543056581_1.jpg" data-full="imgs/b/1016543056581_1.jpg" alt="买家实拍"></div>
+        </div>
+        <a class="buy-btn" href="https://mobile.yangkeduo.com/goods.html?goods_id=1016543056581" target="_blank" rel="noopener">
+          去拼多多看详情 → <em>ID 1016543056581</em>
+        </a>
+      </div>
+    </article>
+
+    <article class="card match-card" data-group="match" id="p4">
+      <div class="card-head">
+        <span class="badge match">你截图里的</span><span class="no">⑤</span>
+        <span class="brand">言仓</span>
+      </div>
+      <div class="pic-wrap">
+        <img class="main-pic" loading="lazy" src="imgs/s/1018160564240.jpg" data-full="imgs/s/1018160564240.jpg" alt="言仓 水豚噜噜 暖手宝（卡皮巴拉造型 · 三档智控）">
+        <span class="pic-label">卖家图</span>
+      </div>
+      <div class="card-body">
+        <h2>言仓 水豚噜噜 暖手宝（卡皮巴拉造型 · 三档智控）</h2>
+        <div class="price-row">
+          <span class="price"><i>¥</i>89.9</span>
+          <span class="sales">本店已拼 62.2万+</span>
+        </div>
+        <div class="tags"><span class="tag">水豚造型</span><span class="tag">三档调温</span><span class="tag">充电式</span><span class="tag">礼物装</span></div>
+        <div class="shot-row"><div class="shot-pic"><img src="imgs/orig/shot5.jpg" alt="我的截图" data-full="imgs/orig/shot5.jpg"><span>你的截图</span></div><div class="shot-arrow">这件商品 →</div></div>
+        <p class="desc">卡皮巴拉（水豚）造型的充电暖手宝，三档智能调温，手握尺寸随身带。萌系颜值 + 实用发热，是送女生 / 生日礼物的热门款。</p>
+        <p class="match">截图⑤的钰森水豚款属于同一类水豚毛绒暖手宝，这条销量和返图都更扎实。</p>
+        <div class="buyer-block">
+          <div class="buyer-title"><b>买家实拍返图</b><span>4 张 · 点图放大</span></div>
+          <div class="buyer-scroll"><img class="thumb" loading="lazy" src="imgs/b/1018160564240_1.jpg" data-full="imgs/b/1018160564240_1.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1018160564240_2.jpg" data-full="imgs/b/1018160564240_2.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1018160564240_3.jpg" data-full="imgs/b/1018160564240_3.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1018160564240_4.jpg" data-full="imgs/b/1018160564240_4.jpg" alt="买家实拍"></div>
+        </div>
+        <a class="buy-btn" href="https://mobile.yangkeduo.com/goods.html?goods_id=1018160564240" target="_blank" rel="noopener">
+          去拼多多看详情 → <em>ID 1018160564240</em>
+        </a>
+      </div>
+    </article>
+
+    <article class="card match-card" data-group="match" id="p5">
+      <div class="card-head">
+        <span class="badge match">你截图里的</span><span class="no">⑥</span>
+        <span class="brand">KYOUNG 彩阳</span>
+      </div>
+      <div class="pic-wrap">
+        <img class="main-pic" loading="lazy" src="imgs/s/1021986670718_card.jpg" data-full="imgs/s/1021986670718_card.jpg" alt="彩阳 防兔绒外套可拆洗 暖手暖肚子电热水袋">
+        <span class="pic-label">卖家图</span>
+      </div>
+      <div class="card-body">
+        <h2>彩阳 防兔绒外套可拆洗 暖手暖肚子电热水袋</h2>
+        <div class="price-row">
+          <span class="price"><i>¥</i>59.7</span>
+          <span class="sales">本店已拼 2.6万</span>
+        </div>
+        <div class="tags"><span class="tag">防兔绒</span><span class="tag">可拆洗</span><span class="tag">大容量</span><span class="tag">正品险</span></div>
+        <div class="shot-row"><div class="shot-pic"><img src="imgs/orig/shot6.jpg" alt="我的截图" data-full="imgs/orig/shot6.jpg"><span>你的截图</span></div><div class="shot-arrow">这件商品 →</div></div>
+        <p class="desc">防兔绒外套柔软可拆洗，电热水袋结构蓄热久，抱着暖手、贴着暖肚子都行。多色可选（截图里的紫熊头 + 小鸭就是它的主图配色）。</p>
+        <p class="match">截图⑥「超高颜值 / 防兔绒可拆洗」正是这条链接的推广主图。</p>
+        <div class="buyer-block">
+          <div class="buyer-title"><b>买家实拍返图</b><span>3 张 · 点图放大</span></div>
+          <div class="buyer-scroll"><img class="thumb" loading="lazy" src="imgs/b/1021986670718_1.jpg" data-full="imgs/b/1021986670718_1.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1021986670718_3.jpg" data-full="imgs/b/1021986670718_3.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1021986670718_4.jpg" data-full="imgs/b/1021986670718_4.jpg" alt="买家实拍"></div>
+        </div>
+        <a class="buy-btn" href="https://mobile.yangkeduo.com/goods.html?goods_id=1021986670718" target="_blank" rel="noopener">
+          去拼多多看详情 → <em>ID 1021986670718</em>
+        </a>
+      </div>
+    </article>
+
+    <article class="card match-card" data-group="match" id="p6">
+      <div class="card-head">
+        <span class="badge match">你截图里的</span><span class="no">⑦</span>
+        <span class="brand">机乐堂</span>
+      </div>
+      <div class="pic-wrap">
+        <img class="main-pic" loading="lazy" src="imgs/s/841451563044.jpg" data-full="imgs/s/841451563044.jpg" alt="机乐堂「nuan nuan」加长毛绒电热水袋（真国标3C）">
+        <span class="pic-label">卖家图</span>
+      </div>
+      <div class="card-body">
+        <h2>机乐堂「nuan nuan」加长毛绒电热水袋（真国标3C）</h2>
+        <div class="price-row">
+          <span class="price"><i>¥</i>52.69</span>
+          <span class="sales">全店总销 900万+</span>
+        </div>
+        <div class="tags"><span class="tag">国标3C</span><span class="tag">水电分离防爆</span><span class="tag">加长加大</span><span class="tag">可拆洗</span></div>
+        <div class="shot-row"><div class="shot-pic"><img src="imgs/orig/shot7.jpg" alt="我的截图" data-full="imgs/orig/shot7.jpg"><span>你的截图</span></div><div class="shot-arrow">这件商品 →</div></div>
+        <p class="desc">真国标 3C 认证 + 水电分离防爆，加长加大号（可暖被窝、敷肚子、敷腰），毛绒外套可拆卸水洗。1 年质保、7 天换新。</p>
+        <p class="match">截图⑦「希望蓝 nuan nuan」就是这个链接的蓝色款。</p>
+        <div class="buyer-block">
+          <div class="buyer-title"><b>买家实拍返图</b><span>3 张 · 点图放大</span></div>
+          <div class="buyer-scroll"><img class="thumb" loading="lazy" src="imgs/b/841451563044_1.jpg" data-full="imgs/b/841451563044_1.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/841451563044_3.jpg" data-full="imgs/b/841451563044_3.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/841451563044_4.jpg" data-full="imgs/b/841451563044_4.jpg" alt="买家实拍"></div>
+        </div>
+        <a class="buy-btn" href="https://mobile.yangkeduo.com/goods.html?goods_id=841451563044" target="_blank" rel="noopener">
+          去拼多多看详情 → <em>ID 841451563044</em>
+        </a>
+      </div>
+    </article>
+
+    <article class="card pick-card" data-group="pick" id="p7">
+      <div class="card-head">
+        <span class="badge pick">额外推荐</span>
+        <span class="brand">Yoobao 羽博</span>
+      </div>
+      <div class="pic-wrap">
+        <img class="main-pic" loading="lazy" src="imgs/s/1022092093909.jpg" data-full="imgs/s/1022092093909.jpg" alt="羽博 毛绒磁吸分体式暖手宝（双手全包覆）">
+        <span class="pic-label">卖家图</span>
+      </div>
+      <div class="card-body">
+        <h2>羽博 毛绒磁吸分体式暖手宝（双手全包覆）</h2>
+        <div class="price-row">
+          <span class="price"><i>¥</i>86</span>
+          <span class="sales">本店已拼 74.7万+</span>
+        </div>
+        <div class="tags"><span class="tag">双面发热</span><span class="tag">双手全包</span><span class="tag">磁吸分体</span><span class="tag">USB充电</span></div>
+        
+        <p class="desc">两个发热模块同时工作、360°×2 包裹式发热，磁吸可分体，左右手各握一个；毛绒套软糯，USB 充电，通勤和学习都能用。</p>
+        
+        <div class="buyer-block">
+          <div class="buyer-title"><b>买家实拍返图</b><span>4 张 · 点图放大</span></div>
+          <div class="buyer-scroll"><img class="thumb" loading="lazy" src="imgs/b/1022092093909_1.jpg" data-full="imgs/b/1022092093909_1.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1022092093909_2.jpg" data-full="imgs/b/1022092093909_2.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1022092093909_3.jpg" data-full="imgs/b/1022092093909_3.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1022092093909_4.jpg" data-full="imgs/b/1022092093909_4.jpg" alt="买家实拍"></div>
+        </div>
+        <a class="buy-btn" href="https://mobile.yangkeduo.com/goods.html?goods_id=1022092093909" target="_blank" rel="noopener">
+          去拼多多看详情 → <em>ID 1022092093909</em>
+        </a>
+      </div>
+    </article>
+
+    <article class="card pick-card" data-group="pick" id="p8">
+      <div class="card-head">
+        <span class="badge pick">额外推荐</span>
+        <span class="brand">Yoobao 羽博</span>
+      </div>
+      <div class="pic-wrap">
+        <img class="main-pic" loading="lazy" src="imgs/s/1021172617811.jpg" data-full="imgs/s/1021172617811.jpg" alt="羽博 8000mAh 磁吸二合一暖手宝（可上飞机）">
+        <span class="pic-label">卖家图</span>
+      </div>
+      <div class="card-body">
+        <h2>羽博 8000mAh 磁吸二合一暖手宝（可上飞机）</h2>
+        <div class="price-row">
+          <span class="price"><i>¥</i>92.7</span>
+          <span class="sales">本店已拼 99.2万+</span>
+        </div>
+        <div class="tags"><span class="tag">8000mAh</span><span class="tag">分离式双面</span><span class="tag">3C可上飞机</span><span class="tag">带数显</span></div>
+        
+        <p class="desc">单边 4000mAh、合计 8000mAh 大容量，续航长；分离式设计可拆成两个，双面发热，带电量 / 温度数显，3C 认证电池可带上飞机。</p>
+        
+        <div class="buyer-block">
+          <div class="buyer-title"><b>买家实拍返图</b><span>4 张 · 点图放大</span></div>
+          <div class="buyer-scroll"><img class="thumb" loading="lazy" src="imgs/b/1021172617811_1.jpg" data-full="imgs/b/1021172617811_1.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1021172617811_2.jpg" data-full="imgs/b/1021172617811_2.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1021172617811_3.jpg" data-full="imgs/b/1021172617811_3.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1021172617811_4.jpg" data-full="imgs/b/1021172617811_4.jpg" alt="买家实拍"></div>
+        </div>
+        <a class="buy-btn" href="https://mobile.yangkeduo.com/goods.html?goods_id=1021172617811" target="_blank" rel="noopener">
+          去拼多多看详情 → <em>ID 1021172617811</em>
+        </a>
+      </div>
+    </article>
+
+    <article class="card pick-card" data-group="pick" id="p9">
+      <div class="card-head">
+        <span class="badge pick">额外推荐</span>
+        <span class="brand">JISULIFE 几素</span>
+      </div>
+      <div class="pic-wrap">
+        <img class="main-pic" loading="lazy" src="imgs/s/409015274211.jpg" data-full="imgs/s/409015274211.jpg" alt="几素 一秒速热 USB暖手宝（60℃恒温 13小时）">
+        <span class="pic-label">卖家图</span>
+      </div>
+      <div class="card-body">
+        <h2>几素 一秒速热 USB暖手宝（60℃恒温 13小时）</h2>
+        <div class="price-row">
+          <span class="price"><i>¥</i>98</span>
+          <span class="sales">全店总销 76.2万+</span>
+        </div>
+        <div class="tags"><span class="tag">一秒速热</span><span class="tag">60℃恒温</span><span class="tag">13小时续航</span><span class="tag">顺丰次日达</span></div>
+        
+        <p class="desc">一秒速热、60℃ 恒温、最长 13 小时续航，机身小巧一握即暖，防爆 3C，男女通用；顺丰次日达，应急送礼都不慌。</p>
+        
+        <div class="buyer-block">
+          <div class="buyer-title"><b>买家实拍返图</b><span>3 张 · 点图放大</span></div>
+          <div class="buyer-scroll"><img class="thumb" loading="lazy" src="imgs/b/409015274211_1.jpg" data-full="imgs/b/409015274211_1.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/409015274211_2.jpg" data-full="imgs/b/409015274211_2.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/409015274211_4.jpg" data-full="imgs/b/409015274211_4.jpg" alt="买家实拍"></div>
+        </div>
+        <a class="buy-btn" href="https://mobile.yangkeduo.com/goods.html?goods_id=409015274211" target="_blank" rel="noopener">
+          去拼多多看详情 → <em>ID 409015274211</em>
+        </a>
+      </div>
+    </article>
+
+    <article class="card pick-card" data-group="pick" id="p10">
+      <div class="card-head">
+        <span class="badge pick">额外推荐</span>
+        <span class="brand">唯立德 VENDER</span>
+      </div>
+      <div class="pic-wrap">
+        <img class="main-pic" loading="lazy" src="imgs/s/1011481240444.jpg" data-full="imgs/s/1011481240444.jpg" alt="唯立德 磁吸分离式暖手宝（3C电池 · 可定时）">
+        <span class="pic-label">卖家图</span>
+      </div>
+      <div class="card-body">
+        <h2>唯立德 磁吸分离式暖手宝（3C电池 · 可定时）</h2>
+        <div class="price-row">
+          <span class="price"><i>¥</i>123.3</span>
+          <span class="sales">已抢 10.5万+ 件</span>
+        </div>
+        <div class="tags"><span class="tag">3C认证电池</span><span class="tag">磁吸分离</span><span class="tag">定时充电</span><span class="tag">礼盒装</span></div>
+        
+        <p class="desc">3C 认证电池 + 磁吸分离式结构，支持定时充电更安心；做工和包装偏精致，适合当礼物送人，价格略高。</p>
+        
+        <div class="buyer-block">
+          <div class="buyer-title"><b>买家实拍返图</b><span>3 张 · 点图放大</span></div>
+          <div class="buyer-scroll"><img class="thumb" loading="lazy" src="imgs/b/1011481240444_2.jpg" data-full="imgs/b/1011481240444_2.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1011481240444_3.jpg" data-full="imgs/b/1011481240444_3.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1011481240444_4.jpg" data-full="imgs/b/1011481240444_4.jpg" alt="买家实拍"></div>
+        </div>
+        <a class="buy-btn" href="https://mobile.yangkeduo.com/goods.html?goods_id=1011481240444" target="_blank" rel="noopener">
+          去拼多多看详情 → <em>ID 1011481240444</em>
+        </a>
+      </div>
+    </article>
+
+    <article class="card pick-card" data-group="pick" id="p11">
+      <div class="card-head">
+        <span class="badge pick">额外推荐</span>
+        <span class="brand">MINISO 名创优品</span>
+      </div>
+      <div class="pic-wrap">
+        <img class="main-pic" loading="lazy" src="imgs/s/1024888248339.jpg" data-full="imgs/s/1024888248339.jpg" alt="名创优品 Hello Kitty 红白2.0 迷你电暖水袋">
+        <span class="pic-label">卖家图</span>
+      </div>
+      <div class="card-body">
+        <h2>名创优品 Hello Kitty 红白2.0 迷你电暖水袋</h2>
+        <div class="price-row">
+          <span class="price"><i>¥</i>40.4</span>
+          <span class="sales">本店已拼 25.2万+</span>
+        </div>
+        <div class="tags"><span class="tag">Hello Kitty正版</span><span class="tag">迷你款</span><span class="tag">新国标</span><span class="tag">高颜值</span></div>
+        
+        <p class="desc">名创优品 Hello Kitty 红白 2.0 系列，迷你苹果款电暖水袋，符合新国标；红色 Kitty 毛绒套辨识度高，40 元左右性价比很好，学生党友好。</p>
+        
+        <div class="buyer-block">
+          <div class="buyer-title"><b>买家实拍返图</b><span>3 张 · 点图放大</span></div>
+          <div class="buyer-scroll"><img class="thumb" loading="lazy" src="imgs/b/1024888248339_2.jpg" data-full="imgs/b/1024888248339_2.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1024888248339_3.jpg" data-full="imgs/b/1024888248339_3.jpg" alt="买家实拍"><img class="thumb" loading="lazy" src="imgs/b/1024888248339_4.jpg" data-full="imgs/b/1024888248339_4.jpg" alt="买家实拍"></div>
+        </div>
+        <a class="buy-btn" href="https://mobile.yangkeduo.com/goods.html?goods_id=1024888248339" target="_blank" rel="noopener">
+          去拼多多看详情 → <em>ID 1024888248339</em>
+        </a>
+      </div>
+    </article>
+
+    <article class="card pick-card" data-group="pick" id="p12">
+      <div class="card-head">
+        <span class="badge pick">额外推荐</span>
+        <span class="brand">硕图</span>
+      </div>
+      <div class="pic-wrap">
+        <img class="main-pic" loading="lazy" src="imgs/s/1022918015594.jpg" data-full="imgs/s/1022918015594.jpg" alt="硕图 石墨烯无水暖手袋（徳绒面 · 不用注水）">
+        <span class="pic-label">卖家图</span>
+      </div>
+      <div class="card-body">
+        <h2>硕图 石墨烯无水暖手袋（徳绒面 · 不用注水）</h2>
+        <div class="price-row">
+          <span class="price"><i>¥</i>56</span>
+          <span class="sales">本店已拼 6.5万</span>
+        </div>
+        <div class="tags"><span class="tag">石墨烯发热</span><span class="tag">无水</span><span class="tag">徳绒面料</span><span class="tag">双面</span></div>
+        
+        <p class="desc">石墨烯无水电加热，不用注水、不怕漏，徳绒面料柔软；双面发热，可暖手也可敷腰敷肚子，轻便好带。</p>
+        
+        <div class="buyer-block">
+          <div class="buyer-title"><b>买家实拍返图</b><span>1 张 · 点图放大</span></div>
+          <div class="buyer-scroll"><img class="thumb" loading="lazy" src="imgs/b/1022918015594_1.jpg" data-full="imgs/b/1022918015594_1.jpg" alt="买家实拍"></div>
+        </div>
+        <a class="buy-btn" href="https://mobile.yangkeduo.com/goods.html?goods_id=1022918015594" target="_blank" rel="noopener">
+          去拼多多看详情 → <em>ID 1022918015594</em>
+        </a>
+      </div>
+    </article>
+
+  <footer>
+    图片来源：拼多多商品主图与买家评价实拍，版权归原作者。<br>
+    价格为抓取时的券后价，随活动变动，以拼多多页面为准。<br>
+    汇总时间 2026-11-17
+  </footer>
+</div>
+
+<div id="lightbox">
+  <div class="close">&times;</div>
+  <img src="" alt="大图">
+  <div class="hint">点击任意位置关闭</div>
+</div>
+
+<script>
+(function(){
+  var btns = document.querySelectorAll('.filters button');
+  var cards = document.querySelectorAll('.card');
+  Array.prototype.forEach.call(btns, function(b){
+    b.addEventListener('click', function(){
+      Array.prototype.forEach.call(btns, function(x){ x.classList.remove('on'); });
+      b.classList.add('on');
+      var f = b.getAttribute('data-f');
+      Array.prototype.forEach.call(cards, function(c){
+        c.style.display = (f === 'all' || c.getAttribute('data-group') === f) ? '' : 'none';
+      });
+    });
+  });
+
+  var lb = document.getElementById('lightbox');
+  var lbImg = lb.querySelector('img');
+  lb.addEventListener('click', function(){ lb.classList.remove('on'); lbImg.src = ''; });
+
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if (t && t.tagName === 'IMG' && t.getAttribute('data-full')){
+      lbImg.src = t.getAttribute('data-full');
+      lb.classList.add('on');
+    }
+  });
+})();
+</script>
+</body>
+</html>
